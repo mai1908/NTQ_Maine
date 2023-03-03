@@ -1,0 +1,1062 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2EBE6327-ED63-4810-96BF-1AD92CF17AD5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Maine</RootNamespace>
+    <AssemblyName>Maine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44340</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.2.2\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.2.2\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.2.2\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.2.2\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.2.2\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.2.2\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.2.2\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.2.2\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.2.2\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Models\LoginModel.cs" />
+    <Compile Include="Common\CommonConstants.cs" />
+    <Compile Include="Common\Encryptor.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\UserLogin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\admin\bower_components\bootstrap-social\.gitignore" />
+    <Content Include="assets\admin\bower_components\bootstrap-social\bootstrap-social.css" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\admin\bower_components\bootstrap\gruntfile.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\affix.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\alert.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\button.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\carousel.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\collapse.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\dropdown.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\modal.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\popover.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\scrollspy.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\tab.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\tooltip.js" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\transition.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\average%28%29.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\column%28%29.title%28%29.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\columns%28%29.order%28%29.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnadddataanddisplay.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnaddtr.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fncolumnindextovisible.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fndataupdate.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fndisplayrow.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fndisplaystart.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnfakerowspan.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnfilterall.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnfilterclear.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnfilteronreturn.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnfindcellrowindexes.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnfindcellrownodes.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fngetadjacenttr.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fngetcolumndata.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fngetcolumnindex.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fngethiddennodes.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fngettd.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fngettds.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnlengthchange.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnmultifilter.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnpaginginfo.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnprocessingindicator.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnreloadajax.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnsetfilteringdelay.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnsortneutral.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnstandingredraw.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\fnvisibletocolumnindex.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\page.jumptodata%28%29.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\api\sum%28%29.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\alphabetSearch\datatables.alphabetsearch.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\alphabetSearch\datatables.alphabetsearch.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\alphabetSearch\datatables.alphabetsearch.min.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\lengthLinks\datatables.lengthlinks.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\lengthLinks\datatables.lengthlinks.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\lengthLinks\datatables.lengthlinks.min.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\searchHighlight\datatables.searchhighlight.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\searchHighlight\datatables.searchhighlight.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\features\searchHighlight\datatables.searchhighlight.min.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\filtering\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\filtering\row-based\range_dates.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\filtering\row-based\range_numbers.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\filtering\row-based\tabletools.showselectedonly.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\filtering\type-based\accent-neutralise.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\filtering\type-based\html.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\filtering\type-based\phonenumber.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\1\datatables.bootstrap.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\1\datatables.bootstrap.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\2\datatables.bootstrap.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\2\datatables.bootstrap.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\2\datatables.bootstrap.min.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\2\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\3\datatables.bootstrap.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\3\datatables.bootstrap.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\3\datatables.bootstrap.min.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\3\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\images\sort_asc.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\images\sort_asc_disabled.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\images\sort_both.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\images\sort_desc.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\bootstrap\images\sort_desc_disabled.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\font-awesome\bootstrap.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\font-awesome\datatables.fontawesome.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\font-awesome\datatables.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\font-awesome\foundation.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\datatables.foundation.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\datatables.foundation.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\datatables.foundation.min.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\images\sort_asc.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\images\sort_asc_disabled.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\images\sort_both.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\images\sort_desc.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\images\sort_desc_disabled.png" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\foundation\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\jqueryui\datatables.jqueryui.css" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\jqueryui\datatables.jqueryui.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\jqueryui\datatables.jqueryui.min.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\jqueryui\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\pagination\ellipses.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\pagination\extjs.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\pagination\four_button.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\pagination\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\pagination\input.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\pagination\jPaginator\datatables.jpaginator.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\pagination\scrolling.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\pagination\select.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\alt-string.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\anti-the.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\chinese-string.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\currency.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\custom-data-source\dom-checkbox.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\custom-data-source\dom-select.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\custom-data-source\dom-text.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\date-dd-mmm-yyyy.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\date-de.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\date-eu.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\date-euro.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\date-uk.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\datetime-moment.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\datetime-us.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\enum.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\file-size.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\formatted-numbers.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\ip-address.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\monthyear.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\natural.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\num-html.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\numeric-comma.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\percent.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\persian.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\scientific.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\signed-num.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\stringmonthyear.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\time.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\title-numeric.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\title-string.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\turkish-string.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\type-detection\currency.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\type-detection\date-uk.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\type-detection\file-size.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\type-detection\formatted-num.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\type-detection\index.html" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\type-detection\ip-address.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\type-detection\num-html.js" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\type-detection\numeric-comma.js" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\.gitignore" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\css\datatables.responsive.css" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\docs\api\responsive.index%28%29.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\docs\api\responsive.recalc%28%29.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\docs\option\responsive.breakpoints.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\docs\option\responsive.details.renderer.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\docs\option\responsive.details.target.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\docs\option\responsive.details.type.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\docs\option\responsive.details.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\docs\option\responsive.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\child-rows\column-control.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\child-rows\custom-renderer.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\child-rows\disable-child-rows.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\child-rows\index.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\child-rows\right-column.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\child-rows\whole-row-control.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\display-control\auto.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\display-control\classes.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\display-control\index.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\display-control\init-classes.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\index.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\initialisation\ajax.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\initialisation\classname.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\initialisation\default.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\initialisation\index.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\initialisation\new.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\initialisation\option.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\styling\bootstrap.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\styling\foundation.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\styling\index.xml" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\js\datatables.responsive.js" />
+    <Content Include="assets\admin\bower_components\datatables\license.txt" />
+    <Content Include="assets\admin\bower_components\datatables\media\css\jquery.datatables.css" />
+    <Content Include="assets\admin\bower_components\datatables\media\css\jquery.datatables.min.css" />
+    <Content Include="assets\admin\bower_components\datatables\media\css\jquery.datatables_themeroller.css" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\back_disabled.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\back_enabled.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\back_enabled_hover.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\favicon.ico" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\forward_disabled.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\forward_enabled.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\forward_enabled_hover.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\sort_asc.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\sort_asc_disabled.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\sort_both.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\sort_desc.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\sort_desc_disabled.png" />
+    <Content Include="assets\admin\bower_components\datatables\media\js\jquery.datatables.js" />
+    <Content Include="assets\admin\bower_components\datatables\media\js\jquery.datatables.min.js" />
+    <Content Include="assets\admin\bower_components\datatables\media\js\jquery.js" />
+    <Content Include="assets\admin\bower_components\flot.tooltip\js\excanvas.min.js" />
+    <Content Include="assets\admin\bower_components\flot.tooltip\js\jquery.flot.js" />
+    <Content Include="assets\admin\bower_components\flot.tooltip\js\jquery.flot.tooltip.js" />
+    <Content Include="assets\admin\bower_components\flot.tooltip\js\jquery.flot.tooltip.min.js" />
+    <Content Include="assets\admin\bower_components\flot.tooltip\js\jquery.flot.tooltip.source.js" />
+    <Content Include="assets\admin\bower_components\flot\.gitignore" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\annotating\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-interacting\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-multiple\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\date.js" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\background.png" />
+    <Content Include="assets\admin\bower_components\flot\examples\basic-options\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\basic-usage\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\canvas\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\categories\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\examples.css" />
+    <Content Include="assets\admin\bower_components\flot\examples\image\hs-2004-27-a-large-web.jpg" />
+    <Content Include="assets\admin\bower_components\flot\examples\image\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\interacting\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\navigate\arrow-down.gif" />
+    <Content Include="assets\admin\bower_components\flot\examples\navigate\arrow-left.gif" />
+    <Content Include="assets\admin\bower_components\flot\examples\navigate\arrow-right.gif" />
+    <Content Include="assets\admin\bower_components\flot\examples\navigate\arrow-up.gif" />
+    <Content Include="assets\admin\bower_components\flot\examples\navigate\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\percentiles\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\realtime\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\resize\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\selection\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\series-errorbars\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\series-pie\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\series-toggle\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\series-types\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\shared\jquery-ui\jquery-ui.min.css" />
+    <Content Include="assets\admin\bower_components\flot\examples\stacking\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\symbols\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\threshold\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\tracking\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\visitors\index.html" />
+    <Content Include="assets\admin\bower_components\flot\examples\zooming\index.html" />
+    <Content Include="assets\admin\bower_components\flot\excanvas.js" />
+    <Content Include="assets\admin\bower_components\flot\excanvas.min.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.colorhelpers.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.canvas.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.categories.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.crosshair.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.errorbars.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.fillbetween.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.image.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.navigate.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.pie.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.resize.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.selection.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.stack.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.symbol.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.threshold.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.flot.time.js" />
+    <Content Include="assets\admin\bower_components\flot\jquery.js" />
+    <Content Include="assets\admin\bower_components\flot\license.txt" />
+    <Content Include="assets\admin\bower_components\font-awesome\.gitignore" />
+    <Content Include="assets\admin\bower_components\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\admin\bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\admin\bower_components\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\admin\bower_components\holderjs\.gitattributes" />
+    <Content Include="assets\admin\bower_components\holderjs\.gitignore" />
+    <Content Include="assets\admin\bower_components\holderjs\gulpfile.js" />
+    <Content Include="assets\admin\bower_components\holderjs\holder.js" />
+    <Content Include="assets\admin\bower_components\holderjs\src\augment.js" />
+    <Content Include="assets\admin\bower_components\holderjs\src\holder.js" />
+    <Content Include="assets\admin\bower_components\holderjs\src\ondomready.js" />
+    <Content Include="assets\admin\bower_components\holderjs\src\polyfills.js" />
+    <Content Include="assets\admin\bower_components\holderjs\test\.gitignore" />
+    <Content Include="assets\admin\bower_components\holderjs\test\image.jpg" />
+    <Content Include="assets\admin\bower_components\holderjs\test\index.html" />
+    <Content Include="assets\admin\bower_components\jquery\dist\jquery.js" />
+    <Content Include="assets\admin\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="assets\admin\bower_components\jquery\mit-license.txt" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax\jsonp.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax\load.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax\parsejson.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax\parsexml.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax\script.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax\var\nonce.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax\var\rquery.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\ajax\xhr.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\attributes.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\attributes\attr.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\attributes\classes.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\attributes\prop.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\attributes\support.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\attributes\val.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\callbacks.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\core.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\core\access.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\core\init.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\core\parsehtml.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\core\ready.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\core\var\rsingletag.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\addgethookif.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\curcss.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\defaultdisplay.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\hiddenvisibleselectors.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\support.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\swap.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\var\cssexpand.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\var\getstyles.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\var\ishidden.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\var\rmargin.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\data.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\data\accepts.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\data\data.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\data\var\data_priv.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\data\var\data_user.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\deferred.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\deprecated.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\dimensions.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\effects.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\effects\animatedselector.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\effects\tween.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\event.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\event\ajax.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\event\alias.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\event\support.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\exports\amd.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\exports\global.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\intro.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\jquery.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\manipulation.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\manipulation\support.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\manipulation\var\rcheckabletype.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\manipulation\_evalurl.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\offset.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\outro.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\queue.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\queue\delay.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\selector-native.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\selector-sizzle.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\selector.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\serialize.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\traversing.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\traversing\findfilter.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\traversing\var\rneedscontext.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\arr.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\class2type.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\concat.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\hasown.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\indexof.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\pnum.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\push.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\rnotwhite.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\slice.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\strundefined.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\support.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\var\tostring.js" />
+    <Content Include="assets\admin\bower_components\jquery\src\wrap.js" />
+    <Content Include="assets\admin\bower_components\metisMenu\dist\metismenu.css" />
+    <Content Include="assets\admin\bower_components\metisMenu\dist\metismenu.js" />
+    <Content Include="assets\admin\bower_components\metisMenu\dist\metismenu.min.css" />
+    <Content Include="assets\admin\bower_components\metisMenu\dist\metismenu.min.js" />
+    <Content Include="assets\admin\bower_components\metisMenu\gruntfile.js" />
+    <Content Include="assets\admin\bower_components\metisMenu\src\metismenu.css" />
+    <Content Include="assets\admin\bower_components\metisMenu\src\metismenu.js" />
+    <Content Include="assets\admin\bower_components\mocha\media\logo.svg" />
+    <Content Include="assets\admin\bower_components\mocha\mocha.css" />
+    <Content Include="assets\admin\bower_components\mocha\mocha.js" />
+    <Content Include="assets\admin\bower_components\morrisjs\.gitignore" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\area-as-line.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\area.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\bar-colors.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\bar-no-axes.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\bar.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\days.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\decimal-custom-hover.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\diagonal-xlabels-bar.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\diagonal-xlabels.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\donut-colors.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\donut-formatter.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\donut.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\dst.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\events.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\goals.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\lib\example.css" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\lib\example.js" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\months-no-smooth.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\negative.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\no-grid.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\non-continuous.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\non-date.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\quarters.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\resize.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\stacked_bars.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\timestamps.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\updating.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\weeks.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\years.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\examples\_template.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\gruntfile.js" />
+    <Content Include="assets\admin\bower_components\morrisjs\morris.css" />
+    <Content Include="assets\admin\bower_components\morrisjs\morris.js" />
+    <Content Include="assets\admin\bower_components\morrisjs\morris.min.js" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\specs.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\viz\examples.js" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\viz\exemplary\area0.png" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\viz\exemplary\bar0.png" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\viz\exemplary\line0.png" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\viz\exemplary\stacked_bar0.png" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\viz\test.html" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\viz\visual_specs.js" />
+    <Content Include="assets\admin\bower_components\raphael\dev\amddev.js" />
+    <Content Include="assets\admin\bower_components\raphael\dev\require.js" />
+    <Content Include="assets\admin\bower_components\raphael\license.txt" />
+    <Content Include="assets\admin\bower_components\raphael\raphael-min.js" />
+    <Content Include="assets\admin\bower_components\raphael\raphael.js" />
+    <Content Include="assets\admin\dist\css\sb-admin-2.css" />
+    <Content Include="assets\admin\dist\css\timeline.css" />
+    <Content Include="assets\admin\dist\js\sb-admin-2.js" />
+    <Content Include="assets\admin\js\flot-data.js" />
+    <Content Include="assets\admin\js\morris-data.js" />
+    <Content Include="assets\admin\pages\blank.html" />
+    <Content Include="assets\admin\pages\buttons.html" />
+    <Content Include="assets\admin\pages\flot.html" />
+    <Content Include="assets\admin\pages\forms.html" />
+    <Content Include="assets\admin\pages\grid.html" />
+    <Content Include="assets\admin\pages\icons.html" />
+    <Content Include="assets\admin\pages\index.html" />
+    <Content Include="assets\admin\pages\login.html" />
+    <Content Include="assets\admin\pages\morris.html" />
+    <Content Include="assets\admin\pages\notifications.html" />
+    <Content Include="assets\admin\pages\panels-wells.html" />
+    <Content Include="assets\admin\pages\tables.html" />
+    <Content Include="assets\admin\pages\typography.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="assets\admin\less\mixins.less" />
+    <Content Include="assets\admin\less\sb-admin-2.less" />
+    <Content Include="assets\admin\less\variables.less" />
+    <Content Include="assets\admin\bower_components\bootstrap-social\.bower.json" />
+    <Content Include="assets\admin\bower_components\bootstrap-social\.editorconfig" />
+    <Content Include="assets\admin\bower_components\bootstrap-social\bootstrap-social.less" />
+    <Content Include="assets\admin\bower_components\bootstrap-social\bootstrap-social.scss" />
+    <Content Include="assets\admin\bower_components\bootstrap-social\bower.json" />
+    <Content Include="assets\admin\bower_components\bootstrap-social\readme.md" />
+    <Content Include="assets\admin\bower_components\bootstrap\.bower.json" />
+    <Content Include="assets\admin\bower_components\bootstrap\bower.json" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\admin\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\admin\bower_components\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\admin\bower_components\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\admin\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\admin\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\admin\bower_components\bootstrap\grunt\.jshintrc" />
+    <Content Include="assets\admin\bower_components\bootstrap\grunt\configbridge.json" />
+    <Content Include="assets\admin\bower_components\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\.jscsrc" />
+    <Content Include="assets\admin\bower_components\bootstrap\js\.jshintrc" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\.csscomb.json" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\.csslintrc" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\alerts.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\badges.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\bootstrap.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\button-groups.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\buttons.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\carousel.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\close.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\code.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\component-animations.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\dropdowns.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\forms.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\glyphicons.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\grid.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\input-groups.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\jumbotron.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\labels.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\list-group.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\media.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\alerts.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\buttons.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\center-block.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\forms.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\gradients.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\grid.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\image.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\labels.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\list-group.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\opacity.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\pagination.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\panels.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\resize.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\size.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\table-row.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\modals.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\navbar.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\navs.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\normalize.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\pager.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\pagination.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\panels.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\popovers.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\print.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\progress-bars.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\responsive-embed.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\scaffolding.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\tables.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\theme.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\thumbnails.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\tooltip.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\type.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\utilities.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\variables.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\less\wells.less" />
+    <Content Include="assets\admin\bower_components\bootstrap\license" />
+    <Content Include="assets\admin\bower_components\bootstrap\package.json" />
+    <Content Include="assets\admin\bower_components\bootstrap\readme.md" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\.bower.json" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\afrikaans.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\albanian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\arabic.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\azerbaijan.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\bangla.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\belarusian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\bulgarian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\catalan.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\chinese-traditional.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\chinese.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\croatian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\czech.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\danish.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\dutch.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\english.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\estonian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\filipino.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\finnish.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\french.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\galician.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\georgian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\german.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\greek.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\gujarati.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\hebrew.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\hindi.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\hungarian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\icelandic.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\indonesian-alternative.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\indonesian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\irish.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\italian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\japanese.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\korean.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\latvian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\lithuanian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\macedonian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\malay.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\norwegian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\persian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\polish.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\portuguese-brasil.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\portuguese.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\romanian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\russian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\serbian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\slovak.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\slovenian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\spanish.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\swahili.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\swedish.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\tamil.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\thai.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\turkish.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\ukranian.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\urdu.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\uzbek.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\i18n\vietnamese.lang" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\integration\jqueryui\datatables.jqueryui.scss" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\make.sh" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\readme.md" />
+    <Content Include="assets\admin\bower_components\datatables-plugins\sorting\.ds_store" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\.bower.json" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\bower.json" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\css\datatables.responsive.scss" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\.ds_store" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\examples\initialisation\.ds_store" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\make.sh" />
+    <Content Include="assets\admin\bower_components\datatables-responsive\readme.md" />
+    <Content Include="assets\admin\bower_components\datatables\.bower.json" />
+    <Content Include="assets\admin\bower_components\datatables\bower.json" />
+    <Content Include="assets\admin\bower_components\datatables\contributing.md" />
+    <Content Include="assets\admin\bower_components\datatables\media\images\sorting icons.psd" />
+    <Content Include="assets\admin\bower_components\datatables\readme.md" />
+    <Content Include="assets\admin\bower_components\flot.tooltip\.bower.json" />
+    <Content Include="assets\admin\bower_components\flot.tooltip\bower.json" />
+    <Content Include="assets\admin\bower_components\flot\.bower.json" />
+    <Content Include="assets\admin\bower_components\flot\.travis.yml" />
+    <Content Include="assets\admin\bower_components\flot\api.md" />
+    <Content Include="assets\admin\bower_components\flot\component.json" />
+    <Content Include="assets\admin\bower_components\flot\contributing.md" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\data-eu-gdp-growth-1.json" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\data-eu-gdp-growth-2.json" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\data-eu-gdp-growth-3.json" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\data-eu-gdp-growth-4.json" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\data-eu-gdp-growth-5.json" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\data-eu-gdp-growth.json" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\data-japan-gdp-growth.json" />
+    <Content Include="assets\admin\bower_components\flot\examples\ajax\data-usa-gdp-growth.json" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\africa" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\antarctica" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\asia" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\australasia" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\backward" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\etcetera" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\europe" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\factory" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\iso3166.tab" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\leapseconds" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\northamerica" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\pacificnew" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\solar87" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\solar88" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\solar89" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\southamerica" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\systemv" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\yearistype.sh" />
+    <Content Include="assets\admin\bower_components\flot\examples\axes-time-zones\tz\zone.tab" />
+    <Content Include="assets\admin\bower_components\flot\faq.md" />
+    <Content Include="assets\admin\bower_components\flot\flot.jquery.json" />
+    <Content Include="assets\admin\bower_components\flot\makefile" />
+    <Content Include="assets\admin\bower_components\flot\news.md" />
+    <Content Include="assets\admin\bower_components\flot\package.json" />
+    <Content Include="assets\admin\bower_components\flot\plugins.md" />
+    <Content Include="assets\admin\bower_components\flot\readme.md" />
+    <Content Include="assets\admin\bower_components\font-awesome\.bower.json" />
+    <Content Include="assets\admin\bower_components\font-awesome\.npmignore" />
+    <Content Include="assets\admin\bower_components\font-awesome\bower.json" />
+    <Content Include="assets\admin\bower_components\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\admin\bower_components\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\admin\bower_components\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\admin\bower_components\font-awesome\fonts\fontawesome.otf" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\bordered-pulled.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\core.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\extras.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\fixed-width.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\font-awesome.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\icons.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\larger.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\list.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\mixins.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\path.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\rotated-flipped.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\spinning.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\stacked.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\less\variables.less" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\font-awesome.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_core.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_extras.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_icons.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_larger.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_list.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_mixins.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_path.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_spinning.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_stacked.scss" />
+    <Content Include="assets\admin\bower_components\font-awesome\scss\_variables.scss" />
+    <Content Include="assets\admin\bower_components\holderjs\.bower.json" />
+    <Content Include="assets\admin\bower_components\holderjs\.jshintrc" />
+    <Content Include="assets\admin\bower_components\holderjs\bower.json" />
+    <Content Include="assets\admin\bower_components\holderjs\composer.json" />
+    <Content Include="assets\admin\bower_components\holderjs\package.json" />
+    <Content Include="assets\admin\bower_components\holderjs\readme.md" />
+    <Content Include="assets\admin\bower_components\jquery\.bower.json" />
+    <Content Include="assets\admin\bower_components\jquery\bower.json" />
+    <Content Include="assets\admin\bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="assets\admin\bower_components\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="assets\admin\bower_components\metisMenu\.bower.json" />
+    <Content Include="assets\admin\bower_components\metisMenu\bower.json" />
+    <Content Include="assets\admin\bower_components\metisMenu\license" />
+    <Content Include="assets\admin\bower_components\metisMenu\package.json" />
+    <Content Include="assets\admin\bower_components\metisMenu\readme.md" />
+    <Content Include="assets\admin\bower_components\mocha\.bower.json" />
+    <Content Include="assets\admin\bower_components\mocha\bower.json" />
+    <Content Include="assets\admin\bower_components\mocha\history.md" />
+    <Content Include="assets\admin\bower_components\mocha\license" />
+    <Content Include="assets\admin\bower_components\mocha\readme.md" />
+    <Content Include="assets\admin\bower_components\morrisjs\.bower.json" />
+    <Content Include="assets\admin\bower_components\morrisjs\.travis.yml" />
+    <Content Include="assets\admin\bower_components\morrisjs\bower.json" />
+    <Content Include="assets\admin\bower_components\morrisjs\bower.travis.json" />
+    <Content Include="assets\admin\bower_components\morrisjs\less\morris.core.less" />
+    <Content Include="assets\admin\bower_components\morrisjs\lib\morris.area.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\lib\morris.bar.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\lib\morris.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\lib\morris.donut.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\lib\morris.grid.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\lib\morris.hover.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\lib\morris.line.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\package.json" />
+    <Content Include="assets\admin\bower_components\morrisjs\readme.md" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\area\area_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\bar\bar_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\bar\colours.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\commas_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\donut\donut_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\grid\auto_grid_lines_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\grid\set_data_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\grid\y_label_format_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\hover_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\label_series_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\line\line_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\pad_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\lib\parse_time_spec.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\support\placeholder.coffee" />
+    <Content Include="assets\admin\bower_components\morrisjs\spec\viz\run.sh" />
+    <Content Include="assets\admin\bower_components\raphael\.bower.json" />
+    <Content Include="assets\admin\bower_components\raphael\bower.json" />
+    <Content Include="Areas\Admin\Views\Shared\_Layouts.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="assets\client\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{0b4374f9-a94e-4ed7-8d04-d3fadc873e51}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65127</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44340/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
