@@ -1,3 +1,5 @@
+D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.AssemblyReference.cache
+D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.CoreCompileInputs.cache
 D:\dotnet\Maine\Maine\bin\Maine.dll.config
 D:\dotnet\Maine\Maine\bin\Maine.dll
 D:\dotnet\Maine\Maine\bin\Maine.pdb
@@ -70,6 +72,8 @@ D:\dotnet\Maine\Maine\bin\Microsoft.Web.Infrastructure.dll
 D:\dotnet\Maine\Maine\bin\Model.dll
 D:\dotnet\Maine\Maine\bin\Newtonsoft.Json.dll
 D:\dotnet\Maine\Maine\bin\Owin.dll
+D:\dotnet\Maine\Maine\bin\PagedList.dll
+D:\dotnet\Maine\Maine\bin\PagedList.Mvc.dll
 D:\dotnet\Maine\Maine\bin\System.Web.Helpers.dll
 D:\dotnet\Maine\Maine\bin\System.Web.Mvc.dll
 D:\dotnet\Maine\Maine\bin\System.Web.Optimization.dll
@@ -80,6 +84,8 @@ D:\dotnet\Maine\Maine\bin\System.Web.WebPages.Razor.dll
 D:\dotnet\Maine\Maine\bin\WebGrease.dll
 D:\dotnet\Maine\Maine\bin\Model.pdb
 D:\dotnet\Maine\Maine\bin\Model.dll.config
+D:\dotnet\Maine\Maine\bin\PagedList.xml
+D:\dotnet\Maine\Maine\bin\PagedList.Mvc.xml
 D:\dotnet\Maine\Maine\bin\System.Web.Helpers.xml
 D:\dotnet\Maine\Maine\bin\System.Web.Mvc.xml
 D:\dotnet\Maine\Maine\bin\System.Web.Optimization.xml
@@ -104,8 +110,6 @@ D:\dotnet\Maine\Maine\bin\Microsoft.Owin.Security.Twitter.xml
 D:\dotnet\Maine\Maine\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\dotnet\Maine\Maine\bin\Microsoft.Owin.Security.OAuth.xml
 D:\dotnet\Maine\Maine\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.AssemblyReference.cache
-D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.CoreCompileInputs.cache
 D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.CopyComplete
 D:\dotnet\Maine\Maine\obj\Debug\Maine.dll
 D:\dotnet\Maine\Maine\obj\Debug\Maine.pdb
