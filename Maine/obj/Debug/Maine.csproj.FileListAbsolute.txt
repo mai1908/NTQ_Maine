@@ -1,5 +1,3 @@
-D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.AssemblyReference.cache
-D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.CoreCompileInputs.cache
 D:\dotnet\Maine\Maine\bin\Maine.dll.config
 D:\dotnet\Maine\Maine\bin\Maine.dll
 D:\dotnet\Maine\Maine\bin\Maine.pdb
@@ -53,6 +51,7 @@ D:\dotnet\Maine\Maine\bin\roslyn\vbc.rsp
 D:\dotnet\Maine\Maine\bin\roslyn\VBCSCompiler.exe
 D:\dotnet\Maine\Maine\bin\roslyn\VBCSCompiler.exe.config
 D:\dotnet\Maine\Maine\bin\Antlr3.Runtime.dll
+D:\dotnet\Maine\Maine\bin\CKFinder.dll
 D:\dotnet\Maine\Maine\bin\EntityFramework.dll
 D:\dotnet\Maine\Maine\bin\EntityFramework.SqlServer.dll
 D:\dotnet\Maine\Maine\bin\Microsoft.AspNet.Identity.Core.dll
@@ -110,6 +109,8 @@ D:\dotnet\Maine\Maine\bin\Microsoft.Owin.Security.Twitter.xml
 D:\dotnet\Maine\Maine\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\dotnet\Maine\Maine\bin\Microsoft.Owin.Security.OAuth.xml
 D:\dotnet\Maine\Maine\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.AssemblyReference.cache
+D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.CoreCompileInputs.cache
 D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.CopyComplete
 D:\dotnet\Maine\Maine\obj\Debug\Maine.dll
 D:\dotnet\Maine\Maine\obj\Debug\Maine.pdb

@@ -51,13 +51,15 @@ namespace Model.Dao
 
         public IEnumerable<User> ListAllPaging(string searchString,int page, int pageSize) 
         {
+            IQueryable<User> mode = db.User;
             IOrderedQueryable<User> model = db.User;
             if (!string.IsNullOrEmpty(searchString)) 
             {
-                model = model.Where(x => x.UserName.Contains(searchString) || x.Name.Contains(searchString)).OrderByDescending(x=>x.CreatedDate);
+                model = (IOrderedQueryable<User>)model.Where(x => x.UserName.Contains(searchString) || x.Name.Contains(searchString));
             }
+             
 
-            return db.User.OrderByDescending(x=>x.CreatedDate).ToPagedList(page, pageSize);
+            return model.OrderByDescending(x => x.CreatedDate).ToPagedList(page, pageSize);
         }
 
         public User GetByUserName(string userName) 
@@ -91,6 +93,16 @@ namespace Model.Dao
                 }
             }
         }
+        public bool ChangeStatus(long id) 
+        {
+            var user = db.User.Find(id);
+            
+            user.Status = ! user.Status;
+            db.SaveChanges();
+           
+            return !user.Status;
+        }
+
         public bool Delete(int id) 
         {
             try 
