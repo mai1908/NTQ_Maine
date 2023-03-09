@@ -114,3 +114,10 @@ D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.CoreCompileInputs.cache
 D:\dotnet\Maine\Maine\obj\Debug\Maine.csproj.CopyComplete
 D:\dotnet\Maine\Maine\obj\Debug\Maine.dll
 D:\dotnet\Maine\Maine\obj\Debug\Maine.pdb
+D:\dotnet\Maine\Maine\bin\BotDetect.dll
+D:\dotnet\Maine\Maine\bin\BotDetect.Web.Mvc.dll
+D:\dotnet\Maine\Maine\bin\CaptchaMvc.dll
+D:\dotnet\Maine\Maine\bin\System.Data.SQLite.dll
+D:\dotnet\Maine\Maine\bin\CaptchaMvc.pdb
+D:\dotnet\Maine\Maine\bin\CaptchaMvc.xml
+D:\dotnet\Maine\Maine\bin\System.Data.SQLite.xml

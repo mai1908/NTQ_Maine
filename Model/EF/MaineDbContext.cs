@@ -7,8 +7,6 @@ namespace Model.EF
 {
     public partial class MaineDbContext : DbContext
     {
-        internal object Users;
-
         public MaineDbContext()
             : base("name=MaineDbContext")
         {
@@ -29,7 +27,6 @@ namespace Model.EF
         public virtual DbSet<SystemConfig> SystemConfig { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
         public virtual DbSet<User> User { get; set; }
-        public object Categories { get; internal set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -169,5 +166,7 @@ namespace Model.EF
                 .Property(e => e.ModifiedBy)
                 .IsUnicode(false);
         }
+
+        
     }
 }

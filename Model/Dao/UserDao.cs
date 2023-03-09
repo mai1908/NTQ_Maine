@@ -100,7 +100,7 @@ namespace Model.Dao
             user.Status = ! user.Status;
             db.SaveChanges();
            
-            return !user.Status;
+            return (bool)!user.Status;
         }
 
         public bool Delete(int id) 
@@ -117,6 +117,14 @@ namespace Model.Dao
                 return false;
             }
             
+        }
+        public bool CheckUserName(string userName) 
+        {
+            return db.User.Count(x => x.UserName == userName) > 0;
+        }
+        public bool CheckEmail(string email) 
+        {
+            return db.User.Count(x => x.Email == email) > 0;
         }
         
         }

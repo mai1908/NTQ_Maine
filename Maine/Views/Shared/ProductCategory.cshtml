@@ -1,0 +1,15 @@
+﻿@model List<Model.EF.ProductCategory>
+ <ul>
+        <h3>Danh mục sản phẩm</h3>
+        @foreach (var item in Model)
+        {
+            <li class="dropdown"></li>
+            <li><a href="/my-wishlists/@item.MetaTitle-@item.ID" class="dropdown-toggle" data-toggle="dropdown">@item.Name</a></li>
+            <ul class="dropdown-menu">
+                <li><a href="#">1234</a></li>
+            </ul>
+     
+            }
+
+    </ul>
+
